@@ -1,0 +1,9 @@
+version: 0.0
+resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-1:744628107553:task-definition/my-terraform-task:1"
+        LoadBalancerInfo:
+          ContainerName: "my-container-terraform-app"
+          ContainerPort: 8000
